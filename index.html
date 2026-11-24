@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atta &amp; Oven — Neighbourhood bakery, Jayanagar</title>
+<meta name="description" content="Sourdough, croissants and custom cakes baked through the day in Jayanagar, Bengaluru. See what's out of the oven right now, pre-order a morning box or design your cake.">
+<meta name="theme-color" content="#FBE9B7">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preload" as="image" href="assets/img/hero-oven-poster.jpg">
+</head>
+<body>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader-loaf"><span></span></div>
+  <p>Warming the oven</p>
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" data-nav>
+  <a class="brand" href="#top" aria-label="Atta and Oven home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V15a11 11 0 0 1 22 0v12Z" fill="currentColor"/><path d="M11 27v-8a5 5 0 0 1 10 0v8Z" fill="var(--butter)"/></svg>
+    <span>Atta &amp; Oven</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#counter">The counter</a>
+    <a href="#cakes">Custom cakes</a>
+    <a href="#box">Morning box</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn btn-sm btn-rye" href="#cakes">Order a cake</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <a href="#counter">The counter</a><a href="#cakes">Custom cakes</a><a href="#box">Morning box</a><a href="#visit">Visit</a>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <h1>Baked this morning, and again at four.</h1>
+    <p class="hero-lede">A neighbourhood bakery in Jayanagar. Slow sourdough, butter croissants and cakes made to order, with fresh batches coming out of the oven all day.</p>
+    <div class="hero-actions">
+      <a class="btn btn-rye" href="#counter">What’s out right now</a>
+      <a class="btn btn-line" href="#cakes">Design a cake</a>
+    </div>
+    <ul class="hero-proof">
+      <li><b>4.8</b> on Google, 2,100 reviews</li>
+      <li><b>18 hr</b> sourdough ferment</li>
+      <li><b>100%</b> butter, no margarine</li>
+    </ul>
+  </div>
+
+  <div class="hero-visual">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/img/hero-oven-poster.jpg">
+      <source src="assets/video/hero-oven.mp4" type="video/mp4">
+    </video>
+    <canvas class="flour" data-flour aria-hidden="true"></canvas>
+  </div>
+</section>
+
+<!-- COUNTER -->
+<section class="counter" id="counter">
+  <div class="wrap counter-head">
+    <h2 class="h-xl">On the counter</h2>
+    <div class="counter-ctrl">
+      <button class="round" data-scroll="-1" aria-label="Previous bakes"><svg viewBox="0 0 24 24"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="round" data-scroll="1" aria-label="Next bakes"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+  <div class="filters wrap" role="group" aria-label="Filter bakes">
+    <button aria-pressed="true" data-filter="all">Everything</button>
+    <button aria-pressed="false" data-filter="bread">Bread</button>
+    <button aria-pressed="false" data-filter="viennoiserie">Croissants &amp; buns</button>
+    <button aria-pressed="false" data-filter="sweet">Cakes &amp; sweets</button>
+    <button aria-pressed="false" data-filter="eggless">Eggless</button>
+  </div>
+  <div class="rail" data-rail tabindex="0" aria-label="Bakes on the counter">
+    <article class="item" data-tags="viennoiserie"><img src="assets/img/bake-croissant.jpg" alt="A tray of golden butter croissants" loading="lazy"><div class="item-body"><h3>Butter croissant</h3><p>Three-day lamination, French butter</p><span class="price">₹140</span></div></article>
+    <article class="item" data-tags="bread eggless"><img src="assets/img/bake-sourdough.jpg" alt="A round country sourdough loaf with a floured crust" loading="lazy"><div class="item-body"><h3>Country sourdough</h3><p>Wheat, rye, 18-hour ferment</p><span class="price">₹320</span></div></article>
+    <article class="item" data-tags="sweet"><img src="assets/img/bake-raspberry.jpg" alt="Slice of raspberry sponge cake with cream" loading="lazy"><div class="item-body"><h3>Raspberry sponge</h3><p>Vanilla chiffon, fresh cream</p><span class="price">₹190 / slice</span></div></article>
+    <article class="item" data-tags="sweet"><img src="assets/img/bake-cookies.jpg" alt="Chocolate chip cookies in a paper-lined bowl" loading="lazy"><div class="item-body"><h3>Brown butter cookie</h3><p>Dark chocolate, sea salt</p><span class="price">₹90</span></div></article>
+    <article class="item" data-tags="sweet eggless"><img src="assets/img/bake-brownie.jpg" alt="Stacked fudgy chocolate brownies" loading="lazy"><div class="item-body"><h3>Eggless fudge brownie</h3><p>70% cocoa, walnuts</p><span class="price">₹120</span></div></article>
+    <article class="item" data-tags="sweet"><img src="assets/img/bake-donuts.jpg" alt="Glazed donuts tumbling through the air" loading="lazy"><div class="item-body"><h3>Filled donuts</h3><p>Weekends only, three flavours</p><span class="price">₹110</span></div></article>
+    <article class="item" data-tags="sweet"><img src="assets/img/bake-lemon.jpg" alt="Lemon meringue tart with a slice cut" loading="lazy"><div class="item-body"><h3>Lemon meringue tart</h3><p>Torched Italian meringue</p><span class="price">₹210</span></div></article>
+    <article class="item" data-tags="sweet eggless"><img src="assets/img/bake-cupcake.jpg" alt="Chocolate cupcakes with swirled frosting" loading="lazy"><div class="item-body"><h3>Eggless mocha cupcake</h3><p>Coffee buttercream</p><span class="price">₹95</span></div></article>
+    <article class="item" data-tags="bread eggless"><img src="assets/img/loaf-sliced.jpg" alt="A seeded multigrain loaf, sliced" loading="lazy"><div class="item-body"><h3>Multigrain sandwich loaf</h3><p>Sliced to order</p><span class="price">₹180</span></div></article>
+  </div>
+  <p class="wrap rail-empty" data-empty hidden>Nothing in this filter today. Try “Everything”.</p>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap process-head">
+    <h2 class="h-xl">How a loaf gets made</h2>
+    <p class="lead">Two days, four steps, no shortcuts. This is what happens behind the counter before you walk in.</p>
+  </div>
+  <ol class="wrap steps">
+    <li class="tile">
+      <video muted loop playsinline preload="none" data-src="assets/video/knead.mp4" poster="assets/img/knead-poster.jpg"></video>
+      <div class="tile-cap"><span>1</span><h3>Mix &amp; knead</h3><p>Stone-ground flour from Mysuru, water, salt and our 6-year-old starter.</p></div>
+    </li>
+    <li class="tile">
+      <video muted loop playsinline preload="none" data-src="assets/video/rest.mp4" poster="assets/img/rest-poster.jpg"></video>
+      <div class="tile-cap"><span>2</span><h3>Rest overnight</h3><p>Eighteen hours cold. That’s where the flavour and the open crumb come from.</p></div>
+    </li>
+    <li class="tile">
+      <video muted loop playsinline preload="none" data-src="assets/video/bake.mp4" poster="assets/img/bake-poster.jpg"></video>
+      <div class="tile-cap"><span>3</span><h3>Bake hot</h3><p>Steam-injected deck oven at 250 °C for a crust that crackles as it cools.</p></div>
+    </li>
+    <li class="tile">
+      <video muted loop playsinline preload="none" data-src="assets/video/slice.mp4" poster="assets/img/slice-poster.jpg"></video>
+      <div class="tile-cap"><span>4</span><h3>Slice &amp; serve</h3><p>Cooled on racks, sliced when you ask, never pre-bagged.</p></div>
+    </li>
+  </ol>
+</section>
+
+<!-- CAKES -->
+<section class="cakes" id="cakes">
+  <div class="wrap cakes-grid">
+    <div class="cake-media">
+      <video muted loop playsinline preload="none" data-src="assets/video/cake.mp4" poster="assets/img/cake-poster.jpg"></video>
+      <img class="cake-float" src="assets/img/cake-choc.jpg" alt="A chocolate drip cake with piped rosettes" loading="lazy">
+    </div>
+    <form class="builder" data-builder novalidate>
+      <h2 class="h-lg">Design your cake</h2>
+      <p class="muted">Pick the basics and we’ll call you within the hour to finish the details. Order 48 hours ahead.</p>
+
+      <fieldset class="chips"><legend>Occasion</legend>
+        <label><input type="radio" name="occasion" value="Birthday" checked><span>Birthday</span></label>
+        <label><input type="radio" name="occasion" value="Anniversary"><span>Anniversary</span></label>
+        <label><input type="radio" name="occasion" value="Baby shower"><span>Baby shower</span></label>
+        <label><input type="radio" name="occasion" value="Just because"><span>Just because</span></label>
+      </fieldset>
+
+      <fieldset class="chips"><legend>Flavour</legend>
+        <label><input type="radio" name="flavour" value="Belgian chocolate" data-rate="1400" checked><span>Belgian chocolate</span></label>
+        <label><input type="radio" name="flavour" value="Raspberry vanilla" data-rate="1500"><span>Raspberry vanilla</span></label>
+        <label><input type="radio" name="flavour" value="Biscoff" data-rate="1600"><span>Biscoff</span></label>
+        <label><input type="radio" name="flavour" value="Mango & cream" data-rate="1450"><span>Mango &amp; cream</span></label>
+      </fieldset>
+
+      <fieldset class="sizes"><legend>Size</legend>
+        <label><input type="radio" name="size" value="0.5" ><span><b>½ kg</b>serves 4–6</span></label>
+        <label><input type="radio" name="size" value="1" checked><span><b>1 kg</b>serves 8–10</span></label>
+        <label><input type="radio" name="size" value="2"><span><b>2 kg</b>serves 18–20</span></label>
+      </fieldset>
+
+      <label class="switch"><input type="checkbox" name="eggless"><span class="track"></span>Make it eggless <small>+₹100</small></label>
+      <label class="field">Message on the cake <small>(optional)</small><input name="message" maxlength="30" placeholder="Happy birthday, Amma"></label>
+
+      <div class="estimate">
+        <div><span>Estimate</span><output data-estimate>₹1,400</output></div>
+        <button class="btn btn-raspberry" type="submit">Send enquiry on WhatsApp</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- MORNING BOX -->
+<section class="box" id="box">
+  <div class="wrap box-grid">
+    <div class="box-copy">
+      <h2 class="h-xl">The morning box</h2>
+      <p class="lead">Order by 9 pm, collect from 7:30 am or get it delivered in Jayanagar, JP Nagar and Basavanagudi.</p>
+      <ul class="box-list">
+        <li><span>2 butter croissants</span></li>
+        <li><span>1 cardamom bun</span></li>
+        <li><span>Half a sourdough, sliced</span></li>
+        <li><span>House salted butter and seasonal jam</span></li>
+      </ul>
+      <div class="box-buy">
+        <p class="box-price">₹690 <small>serves two</small></p>
+        <a class="btn btn-rye" href="https://wa.me/919800000001?text=Hi%20Atta%20%26%20Oven%2C%20I%27d%20like%20a%20morning%20box%20for%20tomorrow." target="_blank" rel="noopener">Pre-order for tomorrow</a>
+      </div>
+      <p class="cutoff" data-cutoff></p>
+    </div>
+    <div class="box-media">
+      <video muted loop playsinline preload="none" data-src="assets/video/morning.mp4" poster="assets/img/morning-poster.jpg"></video>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <h2 class="h-xl">What the neighbours say</h2>
+    <div class="quotes">
+      <figure class="q q1"><blockquote>The four o’clock focaccia batch is the best part of my week. I plan my walk around it.</blockquote><figcaption>Divya K., Jayanagar 5th Block</figcaption></figure>
+      <figure class="q q2"><blockquote>Ordered an eggless Biscoff cake for my son’s birthday. Nobody believed it was eggless.</blockquote><figcaption>Suresh M., on Google</figcaption></figure>
+      <figure class="q q3"><blockquote>Proper flaky croissants in Bengaluru, finally. Get there before ten.</blockquote><figcaption>Priya N., on Instagram</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <figure class="visit-photo"><img src="assets/img/shop-case.jpg" alt="A glass case full of croissants, danishes and breads" loading="lazy"></figure>
+    <div class="visit-card">
+      <h2 class="h-lg">Find the bakery</h2>
+      <address>Atta &amp; Oven<br>21, 11th Main Road, 4th Block<br>Jayanagar, Bengaluru 560011</address>
+      <p class="open" data-open></p>
+      <dl class="hours">
+        <div><dt>Monday – Friday</dt><dd>7:00 am – 9:00 pm</dd></div>
+        <div><dt>Saturday – Sunday</dt><dd>7:00 am – 10:00 pm</dd></div>
+      </dl>
+      <div class="visit-actions">
+        <a class="btn btn-rye" href="https://www.google.com/maps/search/?api=1&query=11th+Main+Road+4th+Block+Jayanagar+Bengaluru" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn-line" href="tel:+919800000001">Call the bakery</a>
+      </div>
+      <p class="delivery">Also on Swiggy and Zomato, 8 am to 8 pm.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot">
+    <p class="foot-word">Atta &amp; Oven</p>
+    <div class="foot-cols">
+      <nav aria-label="Footer"><a href="#today">Today’s bake</a><a href="#counter">The counter</a><a href="#cakes">Custom cakes</a><a href="#box">Morning box</a></nav>
+      <div><a href="#">Instagram</a><a href="#">Swiggy</a><a href="#">Zomato</a></div>
+      <div><a href="mailto:hello@attaandoven.in">hello@attaandoven.in</a><a href="tel:+919800000001">+91 98000 00001</a></div>
+    </div>
+    <p class="foot-small">© <span data-year></span> Atta &amp; Oven. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+<script src="js/main.js" defer></script>
+</body>
+</html>
